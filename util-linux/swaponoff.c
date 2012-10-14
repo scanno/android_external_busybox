@@ -28,6 +28,11 @@
 # include <sys/swap.h>
 #endif
 
+#define SWAP_FLAG_PREFER	0x8000	/* set if swap priority specified */
+#define SWAP_FLAG_PRIO_MASK	0x7fff
+#define SWAP_FLAG_PRIO_SHIFT	0
+#define SWAP_FLAG_DISCARD	0x10000 /* discard swap cluster after use */
+
 #if ENABLE_FEATURE_MOUNT_LABEL
 # include "volume_id.h"
 #else
